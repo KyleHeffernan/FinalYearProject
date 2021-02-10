@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class AgentAI : MonoBehaviour
 {
+    public SimplePath path;
     private NavMeshAgent _navMeshAgent;
     
 
@@ -18,6 +19,12 @@ public class AgentAI : MonoBehaviour
         if (Input.GetMouseButtonDown(0) &&
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var hitInfo))
             _navMeshAgent.SetDestination(hitInfo.point);
+
+
+        if(Vector3.Distance(this.transform.position, _navMeshAgent.destination) < 1)
+        {
+            _navMeshAgent.SetDestination(path.NextWaypoint());
+        }
 
     }
 }
