@@ -8,7 +8,7 @@ public class Infection : MonoBehaviour
     public Material Exposed;
 
     public Material Infectious;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +25,7 @@ public class Infection : MonoBehaviour
     {
         if (collider.gameObject.tag == "test")
         {
+            this.gameObject.tag = "Exposed";
             this.GetComponent<MeshRenderer>().material = Exposed;
         }
     }
