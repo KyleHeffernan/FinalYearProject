@@ -6,6 +6,8 @@ TagManager:
   tags:
   - test
   - Exposed
+  - Infectious
+  - Healthy
   layers:
   - Default
   - TransparentFX

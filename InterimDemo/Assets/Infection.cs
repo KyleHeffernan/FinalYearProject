@@ -23,7 +23,7 @@ public class Infection : MonoBehaviour
 
         private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "test")
+        if (collider.gameObject.tag == "Infectious")
         {
             this.gameObject.tag = "Exposed";
             this.GetComponent<MeshRenderer>().material = Exposed;
