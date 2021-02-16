@@ -40,7 +40,7 @@ public class SimplePath : MonoBehaviour {
 
     public Vector3 NextWaypoint()
     {
-        Debug.Log(waypoints[next]);
+        //Debug.Log(waypoints[next]);
         AdvanceToNext();
         return waypoints[next];
     }
