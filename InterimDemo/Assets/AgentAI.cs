@@ -16,10 +16,10 @@ public class AgentAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        /*
         if (Input.GetMouseButtonDown(0) &&
             Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out var hitInfo))
-            _navMeshAgent.SetDestination(hitInfo.point);
+            _navMeshAgent.SetDestination(hitInfo.point);*/
         
 
         if(Vector3.Distance(this.transform.position, _navMeshAgent.destination) < 1)

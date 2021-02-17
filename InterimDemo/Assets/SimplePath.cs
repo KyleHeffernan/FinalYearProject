@@ -13,6 +13,7 @@ public class SimplePath : MonoBehaviour {
     {
         int count = looped ? (transform.childCount + 1) : transform.childCount;
         Gizmos.color = Color.cyan;
+        /*
         for (int i = 1; i < count; i++)
         {
             Transform prev = transform.GetChild(i - 1);
@@ -20,7 +21,9 @@ public class SimplePath : MonoBehaviour {
             Gizmos.DrawLine(prev.transform.position, next.transform.position);
             Gizmos.DrawSphere(prev.position, 1);
             Gizmos.DrawSphere(next.position, 1);
+            
         }
+        */
     }
 
 	// Use this for initialization
