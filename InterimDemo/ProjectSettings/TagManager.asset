@@ -9,6 +9,7 @@ TagManager:
   - Infectious
   - Healthy
   - Chair
+  - Rec
   layers:
   - Default
   - TransparentFX
