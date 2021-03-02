@@ -98,7 +98,7 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void CheckAtRec()
     {
-        if(Vector3.Distance(this.transform.position, target.transform.position) < 3)
+        if(Vector3.Distance(this.transform.position, target.transform.position) < 2)
         {
             Task.current.Succeed();
         }
