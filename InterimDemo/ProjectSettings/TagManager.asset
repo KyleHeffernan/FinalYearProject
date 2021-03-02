@@ -8,6 +8,7 @@ TagManager:
   - Exposed
   - Infectious
   - Healthy
+  - Chair
   layers:
   - Default
   - TransparentFX

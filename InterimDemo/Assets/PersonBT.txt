@@ -1,0 +1,25 @@
+tree("Root")
+	fallback
+		tree("Work")
+		tree("Rec")
+
+
+tree("Work")
+	sequence
+		CheckWorking()
+		fallback
+			CheckAtDesk()
+			GoToDesk()
+		Work()
+		Wait 5.0
+		FinishWorkSession()
+
+tree("Rec")
+	sequence
+		GetRecTarget()
+		fallback
+			CheckAtRec()
+			GoToRec()
+		Rec()
+		Wait 5.0
+		FinishRec()
