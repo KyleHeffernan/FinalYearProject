@@ -11,7 +11,7 @@ tree("Work")
 			CheckAtDesk()
 			GoToDesk()
 		Work()
-		Wait 10.0
+		Wait 20.0
 		FinishWorkSession()
 
 tree("Rec")

@@ -51,7 +51,7 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void CheckAtDesk()
     {
-        if(Vector3.Distance(this.transform.position, assignedDesk.transform.position) < 2)
+        if(Vector3.Distance(this.transform.position, assignedDesk.transform.position) < 1)
         {
             Task.current.Succeed();
         }
@@ -98,7 +98,7 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void CheckAtRec()
     {
-        if(Vector3.Distance(this.transform.position, target.transform.position) < 2)
+        if(Vector3.Distance(this.transform.position, target.transform.position) < 1)
         {
             Task.current.Succeed();
         }
