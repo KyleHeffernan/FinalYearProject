@@ -23,7 +23,7 @@ public class Infection : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        Debug.Log(collider.transform.name);
+        //Debug.Log(collider.transform.name);
         if (collider.gameObject.tag == "Infectious")
         {
             this.gameObject.tag = "Exposed";

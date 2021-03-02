@@ -10,7 +10,7 @@ public class PlaceManager : MonoBehaviour
 
     void Awake()
     {
-        PopulateDesks();
+        PopulateLists();
         //availableDesks = new List<GameObject>();
         //recPoints = new List<GameObject>();
     }
@@ -20,12 +20,18 @@ public class PlaceManager : MonoBehaviour
     {
         
     }
-    void PopulateDesks()
+    void PopulateLists()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("Chair");
-        foreach (var ob in objs)
+        GameObject[] desks = GameObject.FindGameObjectsWithTag("Chair");
+        foreach (var ob in desks)
         {
             availableDesks.Add(ob);
+        }
+
+        GameObject[] recs = GameObject.FindGameObjectsWithTag("Rec");
+        foreach (var ob in recs)
+        {
+            recPoints.Add(ob);
         }
     }
 }

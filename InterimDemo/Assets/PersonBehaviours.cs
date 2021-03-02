@@ -91,7 +91,7 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void GetRecTarget()
     {
-        target = placeManager.recPoints[0].transform;
+        target = placeManager.recPoints[Random.Range(0, placeManager.recPoints.Count-1)].transform;
         Task.current.Succeed();
     }
 
