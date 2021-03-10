@@ -34,13 +34,16 @@ public class ParticleCollision : MonoBehaviour
             else
             {
                 other.GetComponent<MeshRenderer>().material = Exposed;
-                /*
+
+
+                /* 
                 var myMaterials = other.GetComponent<MeshRenderer>().materials;
                 foreach(var material in myMaterials)
                 {
                     material = Exposed;
                 }
                 */
+                
             }
             i++;
         }
