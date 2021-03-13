@@ -37,38 +37,23 @@ public class ParticleCollision : MonoBehaviour
             }
             else
             {
-                other.GetComponent<MeshRenderer>().material = Exposed;
-                other.GetComponentInChildren<MeshRenderer>().material = Exposed;
-
-                /*
-                foreach(var material in other.GetComponentInChildren<MeshRenderer>().material)
+                if(!other.transform.CompareTag("Ceiling") && !other.transform.CompareTag("Floor") && !other.transform.CompareTag("Wall"))
                 {
-
-                }
-                
-                myMaterials = other.GetComponent<MeshRenderer>().materials;
-                
-                foreach(var material in myMaterials)
-                {
-                    other.GetComponent<MeshRenderer>();
-                    material = Exposed;
-                }
-                */
-                
-                /*
-                objRenderer = other.GetComponent<MeshRenderer>();
-                originalColor = new Color[objRenderer.materials.Length];
-        
-                foreach (Material mat in objRenderer.materials)
-                {
-                    mat = Exposed;
-                    for (i = 0; i < objRenderer.materials.Length; i++)
+                    //other.GetComponent<MeshRenderer>().material = Exposed;
+                    Material[] newMaterials = other.GetComponent<Renderer>().materials;
+                    for(int j=0; j<newMaterials.Length;j++)
                     {
-                        mat = Exposed;
-                        originalColor[i] = Exposed;
+                        newMaterials[j] = Exposed;
                     }
+                    other.GetComponent<Renderer>().materials = newMaterials;
                 }
-                */
+
+
+                
+
+                //ok
+                //other.GetComponentsInChildren<MeshRenderer>().material = Exposed;
+
                 
                 
             }
