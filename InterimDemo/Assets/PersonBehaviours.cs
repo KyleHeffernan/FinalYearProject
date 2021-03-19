@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class PersonBehaviours : MonoBehaviour
 {
-    public SimplePath path;
+    //public SimplePath path;
     public Transform target;
 
     public PlaceManager placeManager;
@@ -51,7 +51,7 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void CheckAtDesk()
     {
-        if(Vector3.Distance(this.transform.position, assignedDesk.transform.position) < 1)
+        if(Vector3.Distance(this.transform.position, assignedDesk.transform.position) < 0.001f)
         {
             Task.current.Succeed();
         }
