@@ -30,7 +30,7 @@ public class PersonBehaviours : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     [Task]
@@ -50,7 +50,7 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void CheckAtDesk()
     {
-        if(Vector3.Distance(this.transform.position, assignedDesk.transform.position) < 0.001f)
+        if(Vector3.Distance(this.transform.position, assignedDesk.transform.position) < 0.1f)
         {
             Task.current.Succeed();
         }
@@ -71,6 +71,9 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void Work()
     {
+        Vector3 lookDirection = -assignedDesk.transform.forward;
+        transform.rotation = Quaternion.LookRotation(lookDirection, transform.up);
+        //this.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
         Task.current.Succeed();
     }
 
