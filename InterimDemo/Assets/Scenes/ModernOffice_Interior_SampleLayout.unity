@@ -2210,8 +2210,7 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Infectious
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!4 &115104957 stripped
 Transform:
@@ -3396,8 +3395,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!1001 &156829769
 PrefabInstance:
@@ -3980,8 +3978,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!1 &180254614
 GameObject:
@@ -4589,8 +4586,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!4 &196422999 stripped
 Transform:
@@ -5698,8 +5694,7 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Infectious
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!4 &228355025 stripped
 Transform:
@@ -6072,7 +6067,7 @@ GameObject:
   - component: {fileID: 252690630}
   - component: {fileID: 252690629}
   - component: {fileID: 252690631}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6087,7 +6082,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252690627}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.376, z: 0}
+  m_LocalPosition: {x: 0.16, y: 1.376, z: 0.29}
   m_LocalScale: {x: 0.8000001, y: 0.8, z: 0.8000001}
   m_Children: []
   m_Father: {fileID: 406247642}
@@ -6165,7 +6160,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252690627}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 9.56
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -6240,7 +6235,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.4
+      scalar: 3.89
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -6725,7 +6720,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 2000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -6784,8 +6779,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
-    angle: 3.69
+    type: 8
+    angle: 21.8
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -6871,7 +6866,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.38
+      value: 0.85
       mode: 0
       spread: 0
       speed:
@@ -6990,7 +6985,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 22.85
+      scalar: 25.09
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -11834,8 +11829,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!1001 &318110862
 PrefabInstance:
@@ -14410,8 +14404,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!4 &511448566 stripped
 Transform:
@@ -19378,8 +19371,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!1001 &808916068
 PrefabInstance:
@@ -21565,8 +21557,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!1001 &903411164
 PrefabInstance:
@@ -22171,8 +22162,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!4 &932756341 stripped
 Transform:
@@ -25260,13 +25250,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5d6df2a9e53be40b551b65673c8bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
+  moveSpeed: 1000
   jumpSpeed: 8
   gravity: 20
-  rotSpeed: 180
-  walkSpeed: 6
-  RunSpeed: 14
-  maxSpeed: 0
+  rotSpeed: 15000
+  walkSpeed: 900
+  RunSpeed: 1600
+  maxSpeed: 23000
 --- !u!4 &1119536941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4407548838867200, guid: 5bda03e6c90ba284f859d8e2c3a027fc,
@@ -37560,8 +37550,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!4 &1785505119 stripped
 Transform:
@@ -41191,7 +41180,7 @@ GameObject:
   - component: {fileID: 1975831086}
   - component: {fileID: 1975831085}
   - component: {fileID: 1975831084}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46267,8 +46256,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!1 &1996654056
 GameObject:
@@ -46661,8 +46649,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
 --- !u!1001 &2009297729
 PrefabInstance:
@@ -49203,6 +49190,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnimatedAgent
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6982896903646640050, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57684f3a8cda2a479bc95bb6d55ac1b, type: 3}

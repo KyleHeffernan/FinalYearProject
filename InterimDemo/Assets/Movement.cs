@@ -31,13 +31,13 @@ public class Movement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         this.rotation = new Vector3(0, Input.GetAxisRaw("Horizontal") * rotSpeed * Time.deltaTime, 0);//get new rotation
         if (characterController.isGrounded)
         {
             moveDirection = new Vector3(0.0f, 0.0f, Input.GetAxis("Vertical"));
-            moveDirection = this.transform.TransformDirection(moveDirection) * moveSpeed;
+            moveDirection = this.transform.TransformDirection(moveDirection) * moveSpeed * Time.deltaTime;
 
             if (Input.GetAxis("Vertical") != 0)//If input then move
             {
@@ -79,6 +79,6 @@ public class Movement : MonoBehaviour
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
-        this.transform.Rotate(this.rotation);
+        this.transform.Rotate(this.rotation * Time.deltaTime);
     }//End update
 }
