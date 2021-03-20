@@ -20,8 +20,8 @@ public class animationStateController : MonoBehaviour
     {
         bool isWalking = animator.GetBool(isWalkingHash);
         //bool walkCheck = Input.GetButtonDown("Switch1");
-        Debug.Log(this.GetComponent<NavMeshAgent>().velocity.magnitude);
-        Debug.Log(isWalking);
+        //Debug.Log(this.GetComponent<NavMeshAgent>().velocity.magnitude);
+        //Debug.Log(isWalking);
 
         if (!isWalking && this.GetComponent<NavMeshAgent>().velocity.magnitude > 0.1f)
         {
