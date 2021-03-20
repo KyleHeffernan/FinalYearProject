@@ -1,21 +1,30 @@
 tree("Root")
 	fallback
-		tree("Work")
+		sequence
+			tree("Move")
+			tree("Work")
 		tree("Rec")
+		
 
 
 tree("Work")
+	sequence
+		Work()
+		Wait 20.0
+		FinishWorkSession()
+
+tree("Move")
 	sequence
 		CheckWorking()
 		fallback
 			CheckAtDesk()
 			GoToDesk()
-		Work()
-		Wait 20.0
-		FinishWorkSession()
+		CheckAtDesk()
+
 
 tree("Rec")
 	sequence
+		CheckOnBreak()
 		GetRecTarget()
 		fallback
 			CheckAtRec()

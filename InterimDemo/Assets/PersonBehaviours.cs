@@ -48,6 +48,20 @@ public class PersonBehaviours : MonoBehaviour
     }
 
     [Task]
+    void CheckOnBreak()
+    {
+        if(workingCheck == false)
+        {
+            Task.current.Succeed();
+        }
+        else
+        {
+            Task.current.Fail();
+        }
+
+    }
+
+    [Task]
     void CheckAtDesk()
     {
         if(Vector3.Distance(this.transform.position, assignedDesk.transform.position) < 0.1f)

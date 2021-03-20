@@ -30,7 +30,12 @@ public class ParticleCollision : MonoBehaviour
             {
                 if(!other.transform.CompareTag("Infectious"))
                 {
-                    other.GetComponent<MeshRenderer>().material = Exposed;
+                    SkinnedMeshRenderer[] newMeshRenderer = other.GetComponentsInChildren<SkinnedMeshRenderer>();
+                    foreach(var m in newMeshRenderer)
+                    {
+                        m.material = Exposed;
+                    }
+                    //other.GetComponentsInChildren<SkinnedMeshRenderer>().material = Exposed;
                     other.gameObject.tag = "Exposed";
                 }
 
