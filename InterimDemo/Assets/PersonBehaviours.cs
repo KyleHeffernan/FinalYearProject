@@ -25,7 +25,6 @@ public class PersonBehaviours : MonoBehaviour
     {
         assignedDesk = placeManager.availableDesks[Random.Range(0, placeManager.availableDesks.Count-1)].transform;
         placeManager.availableDesks.Remove(assignedDesk.gameObject);
-
     }
 
     // Update is called once per frame
