@@ -18,6 +18,8 @@ public class PersonBehaviours : MonoBehaviour
 
     private NavMeshAgent _navMeshAgent;
 
+    private float startTime;
+
     private void Awake() => _navMeshAgent = GetComponent<NavMeshAgent>();
 
     // Start is called before the first frame update
@@ -25,6 +27,9 @@ public class PersonBehaviours : MonoBehaviour
     {
         assignedDesk = placeManager.availableDesks[Random.Range(0, placeManager.availableDesks.Count-1)].transform;
         placeManager.availableDesks.Remove(assignedDesk.gameObject);
+        startTime = Time.time;
+        Debug.Log(startTime);
+
     }
 
     // Update is called once per frame

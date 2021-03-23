@@ -34,7 +34,5 @@ public class StatusCounters : MonoBehaviour
         infectiousText.text="Infectious: " + infectious.Length;
 
         timeScaleValue.text = "Time Scale: " + timeSlider.value;
-
-        
     }
 }
