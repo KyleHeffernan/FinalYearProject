@@ -25258,11 +25258,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1000
-  jumpSpeed: 8
   gravity: 20
   rotSpeed: 15000
-  walkSpeed: 900
-  RunSpeed: 1600
+  walkSpeed: 400
   maxSpeed: 23000
 --- !u!4 &1119536941 stripped
 Transform:
