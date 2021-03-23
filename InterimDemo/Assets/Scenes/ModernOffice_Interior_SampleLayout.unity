@@ -4529,7 +4529,7 @@ PrefabInstance:
     - target: {fileID: 7449660502696363132, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.554422
+      value: -3.16
       objectReference: {fileID: 0}
     - target: {fileID: 7449660502696363132, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
@@ -5633,7 +5633,7 @@ PrefabInstance:
     - target: {fileID: 7449660502696363132, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.98
+      value: -24.15
       objectReference: {fileID: 0}
     - target: {fileID: 7449660502696363132, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
@@ -5643,7 +5643,7 @@ PrefabInstance:
     - target: {fileID: 7449660502696363132, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.0337467
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 7449660502696363132, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
@@ -6161,7 +6161,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252690627}
   serializedVersion: 6
-  lengthInSec: 9.84
+  lengthInSec: 8
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -6176,7 +6176,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 1
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -6721,7 +6721,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 3000
+    maxNumParticles: 1000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -25257,11 +25257,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5d6df2a9e53be40b551b65673c8bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1000
-  gravity: 20
-  rotSpeed: 15000
-  walkSpeed: 400
-  maxSpeed: 23000
+  moveSpeed: 800
+  jumpSpeed: 800
+  gravity: 80
+  rotSpeed: 800
+  walkSpeed: 800
+  RunSpeed: 800
+  maxSpeed: 800
 --- !u!4 &1119536941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4407548838867200, guid: 5bda03e6c90ba284f859d8e2c3a027fc,
@@ -46298,7 +46300,7 @@ PrefabInstance:
     - target: {fileID: 7449660502696363132, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.38
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 7449660502696363132, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
