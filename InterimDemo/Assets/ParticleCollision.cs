@@ -25,13 +25,13 @@ public class ParticleCollision : MonoBehaviour
 
         while(i < numCollisionEvents)
         {
-            Debug.Log(i + "," + numCollisionEvents);
+            //Debug.Log(i + "," + numCollisionEvents);
 
             if(rb != null)
             {
                 if(!other.transform.CompareTag("Infectious"))
                 {
-                    Debug.Log("test");
+                    //Debug.Log("test");
                     SkinnedMeshRenderer[] newMeshRenderer = other.GetComponentsInChildren<SkinnedMeshRenderer>();
                     foreach(var m in newMeshRenderer)
                     {
