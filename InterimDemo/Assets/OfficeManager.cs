@@ -5,15 +5,14 @@ using UnityEngine.UI;
 
 public class OfficeManager : MonoBehaviour
 {
-    public Slider WorkingHours;
-    public float homeTime;
+    public float startTime;
 
-    public Transform Home;
 
     // Start is called before the first frame update
     void Start()
     {
-        homeTime = WorkingHours.value;
+        
+        startTime = Time.time;
     }
 
     // Update is called once per frame

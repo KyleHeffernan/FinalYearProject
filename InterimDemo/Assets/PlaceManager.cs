@@ -8,6 +8,8 @@ public class PlaceManager : MonoBehaviour
     public List<GameObject> availableDesks;
     public List<GameObject> recPoints;
 
+    public Transform Home;
+
     void Awake()
     {
         PopulateLists();

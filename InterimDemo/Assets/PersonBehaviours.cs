@@ -4,10 +4,10 @@ using UnityEngine;
 using Panda;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 public class PersonBehaviours : MonoBehaviour
 {
-    //public SimplePath path;
     public Transform target;
 
     public PlaceManager placeManager;
@@ -22,6 +22,8 @@ public class PersonBehaviours : MonoBehaviour
 
     private float startTime;
 
+    public Slider WorkingHours;
+
     private float homeTime;
 
 
@@ -33,7 +35,7 @@ public class PersonBehaviours : MonoBehaviour
         assignedDesk = placeManager.availableDesks[Random.Range(0, placeManager.availableDesks.Count-1)].transform;
         placeManager.availableDesks.Remove(assignedDesk.gameObject);
         startTime = Time.time;
-        homeTime = officeManager.homeTime;
+        homeTime = WorkingHours.value;
 
     }
 
@@ -170,7 +172,7 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void GoHome()
     {
-        _navMeshAgent.destination = officeManager.Home.transform.position;
+        _navMeshAgent.destination = placeManager.Home.transform.position;
         Task.current.Succeed();
     }
 

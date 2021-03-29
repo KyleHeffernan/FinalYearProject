@@ -18,10 +18,15 @@ public class StatusCounters : MonoBehaviour
 
     public TextMeshProUGUI timeScaleValue;
 
+    public TextMeshProUGUI ElapsedTime;
+
+    public OfficeManager officeManager;
+
+
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -39,5 +44,7 @@ public class StatusCounters : MonoBehaviour
         timeScaleValue.text = "Time Scale: " + timeSlider.value;
 
         WorkingHoursText.text = "Working Hours: " + WorkingHours.value;
+
+        ElapsedTime.text = "Elapsed Time: " + (Mathf.Round(Time.time - officeManager.startTime));
     }
 }
