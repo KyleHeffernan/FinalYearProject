@@ -12,8 +12,6 @@ public class PersonBehaviours : MonoBehaviour
 
     public PlaceManager placeManager;
 
-    public OfficeManager officeManager;
-
     public Transform assignedDesk;
 
     public bool workingCheck = true;
@@ -36,7 +34,6 @@ public class PersonBehaviours : MonoBehaviour
         placeManager.availableDesks.Remove(assignedDesk.gameObject);
         startTime = Time.time;
         homeTime = WorkingHours.value;
-
     }
 
     // Update is called once per frame

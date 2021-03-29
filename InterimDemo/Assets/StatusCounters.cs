@@ -20,7 +20,7 @@ public class StatusCounters : MonoBehaviour
 
     public TextMeshProUGUI ElapsedTime;
 
-    public OfficeManager officeManager;
+    public StartTimeManager startTimeManager;
 
 
     // Start is called before the first frame update
@@ -45,6 +45,6 @@ public class StatusCounters : MonoBehaviour
 
         WorkingHoursText.text = "Working Hours: " + WorkingHours.value;
 
-        ElapsedTime.text = "Elapsed Time: " + (Mathf.Round(Time.time - officeManager.startTime));
+        ElapsedTime.text = "Elapsed Time: " + (Mathf.Round(Time.time - startTimeManager.startTime));
     }
 }

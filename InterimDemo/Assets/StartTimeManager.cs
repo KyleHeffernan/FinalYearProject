@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OfficeManager : MonoBehaviour
+public class StartTimeManager : MonoBehaviour
 {
     public float startTime;
 
@@ -11,7 +11,6 @@ public class OfficeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         startTime = Time.time;
     }
 
