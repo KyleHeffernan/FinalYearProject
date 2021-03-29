@@ -12,6 +12,8 @@ public class PersonBehaviours : MonoBehaviour
 
     public PlaceManager placeManager;
 
+    public OfficeManager officeManager;
+
     public Transform assignedDesk;
 
     public bool workingCheck = true;
@@ -20,9 +22,8 @@ public class PersonBehaviours : MonoBehaviour
 
     private float startTime;
 
-    public float homeTime;
+    private float homeTime;
 
-    public Transform home;
 
     private void Awake() => _navMeshAgent = GetComponent<NavMeshAgent>();
 
@@ -32,6 +33,7 @@ public class PersonBehaviours : MonoBehaviour
         assignedDesk = placeManager.availableDesks[Random.Range(0, placeManager.availableDesks.Count-1)].transform;
         placeManager.availableDesks.Remove(assignedDesk.gameObject);
         startTime = Time.time;
+        homeTime = officeManager.homeTime;
 
     }
 
@@ -168,7 +170,7 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void GoHome()
     {
-        _navMeshAgent.destination = home.transform.position;
+        _navMeshAgent.destination = officeManager.Home.transform.position;
         Task.current.Succeed();
     }
 

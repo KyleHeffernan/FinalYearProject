@@ -11,6 +11,9 @@ public class StatusCounters : MonoBehaviour
     public TextMeshProUGUI healthyText;
     public TextMeshProUGUI infectiousText;
 
+    public Slider WorkingHours;
+    public TextMeshProUGUI WorkingHoursText;
+
     public Slider timeSlider;
 
     public TextMeshProUGUI timeScaleValue;
@@ -34,5 +37,7 @@ public class StatusCounters : MonoBehaviour
         infectiousText.text="Infectious: " + infectious.Length;
 
         timeScaleValue.text = "Time Scale: " + timeSlider.value;
+
+        WorkingHoursText.text = "Working Hours: " + WorkingHours.value;
     }
 }
