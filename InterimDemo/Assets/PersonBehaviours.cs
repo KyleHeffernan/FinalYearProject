@@ -20,6 +20,10 @@ public class PersonBehaviours : MonoBehaviour
 
     private float startTime;
 
+    public float homeTime;
+
+    public Transform home;
+
     private void Awake() => _navMeshAgent = GetComponent<NavMeshAgent>();
 
     // Start is called before the first frame update
@@ -145,6 +149,26 @@ public class PersonBehaviours : MonoBehaviour
     void FinishRec()
     {
         workingCheck = true;
+        Task.current.Succeed();
+    }
+
+    [Task]
+    void CheckHome()
+    {
+        if(homeTime < (Time.time - startTime))
+        {
+            Task.current.Succeed();
+        }
+        else
+        {
+            Task.current.Fail();
+        }
+    }
+
+    [Task]
+    void GoHome()
+    {
+        _navMeshAgent.destination = home.transform.position;
         Task.current.Succeed();
     }
 

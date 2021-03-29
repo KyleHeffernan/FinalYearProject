@@ -1,5 +1,6 @@
 tree("Root")
 	fallback
+		tree("Home")
 		sequence
 			tree("Move")
 			tree("Work")
@@ -32,3 +33,8 @@ tree("Rec")
 		Rec()
 		Wait 10.0
 		FinishRec()
+
+tree("Home")
+	sequence
+		CheckHome()
+		GoHome()
