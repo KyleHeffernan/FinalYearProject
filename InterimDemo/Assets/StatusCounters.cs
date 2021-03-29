@@ -20,6 +20,8 @@ public class StatusCounters : MonoBehaviour
 
     public TextMeshProUGUI ElapsedTime;
 
+    public TextMeshProUGUI TimeLeft;
+
     public StartTimeManager startTimeManager;
 
 
@@ -43,8 +45,10 @@ public class StatusCounters : MonoBehaviour
 
         timeScaleValue.text = "Time Scale: " + timeSlider.value;
 
-        WorkingHoursText.text = "Working Hours: " + WorkingHours.value;
+        WorkingHoursText.text = "Working Hours: " + Mathf.Max(Mathf.Round(WorkingHours.value / 60), 1);
 
-        ElapsedTime.text = "Elapsed Time: " + (Mathf.Round(Time.time - startTimeManager.startTime));
+        ElapsedTime.text = "Elapsed Time: " + Mathf.Round(Time.time - startTimeManager.startTime);
+
+        TimeLeft.text = "Time Left: " + Mathf.Round(WorkingHours.value - (Time.time - startTimeManager.startTime));
     }
 }
