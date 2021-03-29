@@ -22,6 +22,7 @@ public class ParticleCollision : MonoBehaviour
         int numCollisionEvents = particle.GetCollisionEvents(other, collisionEvents);
         Rigidbody rb = other.GetComponent<Rigidbody>();
         int i = 0;
+        //Debug.Log("name: " + other.transform.name + ", tag: " + other.transform.tag);
 
         while(i < numCollisionEvents)
         {
@@ -31,7 +32,7 @@ public class ParticleCollision : MonoBehaviour
             {
                 if(!other.transform.CompareTag("Infectious"))
                 {
-                    Debug.Log("test");
+                    //Debug.Log("test");
                     SkinnedMeshRenderer[] newMeshRenderer = other.GetComponentsInChildren<SkinnedMeshRenderer>();
                     foreach(var m in newMeshRenderer)
                     {
