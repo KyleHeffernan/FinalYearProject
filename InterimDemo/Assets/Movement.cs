@@ -26,6 +26,8 @@ public class Movement : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private Vector3 rotation;
 
+    //public GameObject StatusCounters;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
@@ -33,11 +35,11 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        this.rotation = new Vector3(0, Input.GetAxisRaw("Horizontal") * rotSpeed * Time.deltaTime, 0);//get new rotation
+        this.rotation = new Vector3(0, Input.GetAxisRaw("Horizontal") * rotSpeed * (Time.unscaledDeltaTime), 0);//get new rotation
         if (characterController.isGrounded)
         {
             moveDirection = new Vector3(0.0f, 0.0f, Input.GetAxis("Vertical"));
-            moveDirection = this.transform.TransformDirection(moveDirection) * moveSpeed * Time.deltaTime;
+            moveDirection = this.transform.TransformDirection(moveDirection) * moveSpeed * Time.unscaledDeltaTime;
 
             if (Input.GetAxis("Vertical") != 0)//If input then move
             {
@@ -71,10 +73,10 @@ public class Movement : MonoBehaviour
         // Apply gravity. Gravity is multiplied by deltaTime twice (once here, and once below
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
-        moveDirection.y -= gravity * Time.deltaTime;
+        moveDirection.y -= gravity * Time.unscaledDeltaTime;
 
         // Move the controller
-        characterController.Move(moveDirection * Time.deltaTime);
-        this.transform.Rotate(this.rotation * Time.deltaTime);
+        characterController.Move(moveDirection * Time.unscaledDeltaTime);
+        this.transform.Rotate(this.rotation * Time.unscaledDeltaTime);
     }//End update
 }
