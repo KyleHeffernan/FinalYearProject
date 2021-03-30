@@ -27,7 +27,7 @@ public class StartTimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((statusCounters.WorkingHours.value + 20) < (Time.time - startTime))
+        if((statusCounters.WorkingHours.value + 25) < (Time.time - startTime))
         {
             timePanel.SetActive(false);
             statsPanel.SetActive(false);
