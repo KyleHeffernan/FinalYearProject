@@ -51,8 +51,9 @@ public class StatusCounters : MonoBehaviour
 
         ElapsedTime.text = "Elapsed Time: " + Mathf.Round(Time.time - startTimeManager.startTime);
 
-        TimeLeft.text = "Time Left: " + Mathf.Round(WorkingHours.value - (Time.time - startTimeManager.startTime));
+        TimeLeft.text = "Time Left: " + Mathf.Clamp(Mathf.Round(WorkingHours.value - (Time.time - startTimeManager.startTime)), 0, 10000);
 
         exposedFinal.text = exposedText.text;
+        
     }
 }
