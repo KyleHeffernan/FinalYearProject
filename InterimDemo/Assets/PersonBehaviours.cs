@@ -173,6 +173,13 @@ public class PersonBehaviours : MonoBehaviour
         Task.current.Succeed();
     }
 
+    [Task]
+    void GoneHome()
+    {
+        gameObject.GetComponent<CapsuleCollider>().enabled = false;
+        Task.current.Succeed();
+    }
+
 
 
     /*

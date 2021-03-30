@@ -321,7 +321,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 58.33}
-  m_SizeDelta: {x: -840, y: 50}
+  m_SizeDelta: {x: -692, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6661660
 MonoBehaviour:
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Exposed:'
+  m_text: 'Exposed Agents:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -370,15 +370,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -26449,13 +26449,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118534353}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c5d6df2a9e53be40b551b65673c8bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1200
-  jumpSpeed: 800
+  jumpSpeed: 8
   gravity: 80
   rotSpeed: 2200
   walkSpeed: 1200
@@ -35754,9 +35754,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1592333251}
   - component: {fileID: 1592333250}
-  - component: {fileID: 1592333252}
   - component: {fileID: 1592333253}
   - component: {fileID: 1592333254}
+  - component: {fileID: 1592333252}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -35811,6 +35811,7 @@ MonoBehaviour:
   timeScaleValue: {fileID: 1461061133}
   ElapsedTime: {fileID: 1031367074}
   TimeLeft: {fileID: 936745891}
+  exposedFinal: {fileID: 6661660}
   startTimeManager: {fileID: 1592333254}
 --- !u!114 &1592333253
 MonoBehaviour:
@@ -41785,7 +41786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1918363180
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41820,7 +41821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.16981131, g: 0.16260234, b: 0.16260234, a: 0.6627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -46204,7 +46205,7 @@ LightingSettings:
   m_PrefabAsset: {fileID: 0}
   m_Name: Settings.lighting
   serializedVersion: 3
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 0
   m_RealtimeEnvironmentLighting: 1

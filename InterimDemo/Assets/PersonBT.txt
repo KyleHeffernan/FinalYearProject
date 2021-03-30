@@ -38,3 +38,5 @@ tree("Home")
 	sequence
 		CheckHome()
 		GoHome()
+		Wait 8.0
+		GoneHome()
