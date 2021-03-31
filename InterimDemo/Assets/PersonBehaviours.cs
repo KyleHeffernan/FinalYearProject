@@ -24,6 +24,8 @@ public class PersonBehaviours : MonoBehaviour
 
     private float homeTime;
 
+    public Toggle maskToggle;
+    private bool wearingMask;
 
     private void Awake() => _navMeshAgent = GetComponent<NavMeshAgent>();
 
@@ -34,6 +36,8 @@ public class PersonBehaviours : MonoBehaviour
         placeManager.availableDesks.Remove(assignedDesk.gameObject);
         startTime = Time.time;
         homeTime = WorkingHours.value;
+        wearingMask = maskToggle.isOn;
+        Debug.Log(wearingMask);
     }
 
     // Update is called once per frame

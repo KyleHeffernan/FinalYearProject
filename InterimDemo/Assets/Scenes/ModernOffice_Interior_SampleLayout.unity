@@ -2267,6 +2267,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 665353819}
     m_Modifications:
+    - target: {fileID: 1863313380626759476, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3872127827064673900, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2287,6 +2292,11 @@ PrefabInstance:
       propertyPath: homeTime
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: WorkingHours
@@ -3519,6 +3529,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
       propertyPath: WorkingHours
       value: 
       objectReference: {fileID: 1180554737}
@@ -4130,6 +4145,11 @@ PrefabInstance:
       propertyPath: homeTime
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: WorkingHours
@@ -4769,6 +4789,11 @@ PrefabInstance:
       propertyPath: homeTime
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: WorkingHours
@@ -6082,6 +6107,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 665353819}
     m_Modifications:
+    - target: {fileID: 1863313380626759476, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3872127827064673900, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6102,6 +6132,11 @@ PrefabInstance:
       propertyPath: homeTime
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: WorkingHours
@@ -12336,6 +12371,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
       propertyPath: WorkingHours
       value: 
       objectReference: {fileID: 1180554737}
@@ -15075,6 +15115,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
       propertyPath: WorkingHours
       value: 
       objectReference: {fileID: 1180554737}
@@ -17810,7 +17855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &665353819
 Transform:
   m_ObjectHideFlags: 0
@@ -20153,6 +20198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
       propertyPath: WorkingHours
       value: 
       objectReference: {fileID: 1180554737}
@@ -22446,6 +22496,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
       propertyPath: WorkingHours
       value: 
       objectReference: {fileID: 1180554737}
@@ -23079,6 +23134,11 @@ PrefabInstance:
       propertyPath: homeTime
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: WorkingHours
@@ -32403,7 +32463,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1001 &1434255525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39529,6 +39589,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
       propertyPath: WorkingHours
       value: 
       objectReference: {fileID: 1180554737}
@@ -43763,6 +43828,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
       propertyPath: WorkingHours
       value: 
       objectReference: {fileID: 1180554737}
@@ -44189,6 +44259,11 @@ PrefabInstance:
       propertyPath: homeTime
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: WorkingHours
@@ -46814,6 +46889,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 665353819}
     m_Modifications:
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: maskToggle
+      value: 
+      objectReference: {fileID: 1431146824}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: WorkingHours
