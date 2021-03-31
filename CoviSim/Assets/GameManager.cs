@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     
-    void Start()
+    void Awake()
     {
-        
+        Time.timeScale = 1; //Resetting time scale when scene is loaded
     }
 
     // Update is called once per frame

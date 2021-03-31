@@ -45,12 +45,12 @@ public class ParticleCollision : MonoBehaviour
                         {
                             if(collidedPersonBehaviours.wearingMask == true)
                             {
-                                maskPreventionChance = 0.7f;
+                                maskPreventionChance = 0.77f;
                             }
 
                             if(collidedPersonBehaviours.isVaccinated == true)
                             {
-                                vaccinePreventionChance = 0.9f;
+                                vaccinePreventionChance = 0.95f;
                             }
 
                             if(Random.value > maskPreventionChance && Random.value > vaccinePreventionChance)
@@ -85,6 +85,7 @@ public class ParticleCollision : MonoBehaviour
                         newMaterials[j] = Exposed;
                     }
                     other.GetComponent<Renderer>().materials = newMaterials;
+                    //other.AddComponent<ParticleSystem>()
                 }
 
 
