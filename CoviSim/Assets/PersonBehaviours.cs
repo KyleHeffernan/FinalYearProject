@@ -46,7 +46,7 @@ public class PersonBehaviours : MonoBehaviour
 
         wearingMask = maskToggle.isOn;
         isVaccinated = vaccineToggle.isOn;
-        Debug.Log("vaccinated: " + isVaccinated);
+        //Debug.Log("vaccinated: " + isVaccinated);
         if(wearingMask == false)
         {
             maskObject.SetActive(false);
