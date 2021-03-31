@@ -27,6 +27,8 @@ public class PersonBehaviours : MonoBehaviour
     public Toggle maskToggle;
     private bool wearingMask;
 
+    public GameObject maskObject;
+
     private void Awake() => _navMeshAgent = GetComponent<NavMeshAgent>();
 
     // Start is called before the first frame update
@@ -37,7 +39,11 @@ public class PersonBehaviours : MonoBehaviour
         startTime = Time.time;
         homeTime = WorkingHours.value;
         wearingMask = maskToggle.isOn;
-        Debug.Log(wearingMask);
+        if(wearingMask == false)
+        {
+            maskObject.SetActive(false);
+        }
+        //Debug.Log(wearingMask);
     }
 
     // Update is called once per frame
