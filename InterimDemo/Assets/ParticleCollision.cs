@@ -8,7 +8,9 @@ public class ParticleCollision : MonoBehaviour
     public ParticleSystem particle;
     public List<ParticleCollisionEvent> collisionEvents;
 
-    //private List<Material> myMaterials;
+    private float maskPreventionChance = -.1f;
+
+    
 
 
     // Start is called before the first frame update
@@ -32,14 +34,33 @@ public class ParticleCollision : MonoBehaviour
             {
                 if(!other.transform.CompareTag("Infectious"))
                 {
-                    //Debug.Log("test");
-                    SkinnedMeshRenderer[] newMeshRenderer = other.GetComponentsInChildren<SkinnedMeshRenderer>();
-                    foreach(var m in newMeshRenderer)
+                    if(!other.transform.CompareTag("Exposed"))
                     {
-                        m.material = Exposed;
+
+                        PersonBehaviours collidedPersonBehaviours = other.GetComponent<PersonBehaviours>();
+
+                        if(collidedPersonBehaviours.wearingMask == true)
+                        {
+                            maskPreventionChance = 0.7f;
+                        }
+                        
+
+                        if(Random.value > maskPreventionChance)
+                        {
+                            Debug.Log("Infected");
+                            SkinnedMeshRenderer[] newMeshRenderer = other.GetComponentsInChildren<SkinnedMeshRenderer>();
+                            foreach(var m in newMeshRenderer)
+                            {
+                                m.material = Exposed;
+                            }
+                            other.gameObject.tag = "Exposed";
+                        }
+                        else
+                        {
+                            Debug.Log("NOT infected");
+                        }
+                        
                     }
-                    
-                    other.gameObject.tag = "Exposed";
                 }
 
             }

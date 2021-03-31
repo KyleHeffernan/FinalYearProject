@@ -25,7 +25,7 @@ public class PersonBehaviours : MonoBehaviour
     private float homeTime;
 
     public Toggle maskToggle;
-    private bool wearingMask;
+    public bool wearingMask;
 
     public GameObject maskObject;
 
