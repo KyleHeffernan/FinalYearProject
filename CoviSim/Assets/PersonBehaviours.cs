@@ -34,6 +34,11 @@ public class PersonBehaviours : MonoBehaviour
 
     public float lastHit = 0;
 
+    public GameObject particleSystemNoMask;
+
+    public GameObject particleSystemMask;
+
+
     private void Awake() => _navMeshAgent = GetComponent<NavMeshAgent>();
 
     // Start is called before the first frame update
@@ -51,8 +56,15 @@ public class PersonBehaviours : MonoBehaviour
         {
             maskObject.SetActive(false);
         }
+        else
+        {
+            if(this.tag == "Infectious")
+            {   
+                particleSystemNoMask.SetActive(false);
+                particleSystemMask.SetActive(true);
+            }
+        }
 
-        //Debug.Log(wearingMask);
     }
 
     // Update is called once per frame
