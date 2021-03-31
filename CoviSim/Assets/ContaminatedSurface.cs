@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleCollision : MonoBehaviour
+public class ContaminatedSurface : MonoBehaviour
 {
     public Material Exposed;
     public ParticleSystem particle;
@@ -12,7 +12,6 @@ public class ParticleCollision : MonoBehaviour
 
     private float vaccinePreventionChance = -.1f;
 
-    public GameObject particleSystemContaminated;
 
     
 
@@ -57,7 +56,7 @@ public class ParticleCollision : MonoBehaviour
 
                             if(Random.value > maskPreventionChance && Random.value > vaccinePreventionChance)
                             {
-                                Debug.Log("Infected");
+                                Debug.Log("Infected from surface");
                                 SkinnedMeshRenderer[] newMeshRenderer = other.GetComponentsInChildren<SkinnedMeshRenderer>();
                                 foreach(var m in newMeshRenderer)
                                 {
@@ -67,7 +66,7 @@ public class ParticleCollision : MonoBehaviour
                             }
                             else
                             {
-                                Debug.Log("NOT infected");
+                                Debug.Log("NOT infected from surface");
                             }
                             collidedPersonBehaviours.lastHit = Time.time;
                         }
@@ -75,33 +74,6 @@ public class ParticleCollision : MonoBehaviour
                     }
                 }
 
-            }
-            else
-            {
-                if(!other.transform.CompareTag("Ceiling") && !other.transform.CompareTag("Floor") && !other.transform.CompareTag("Wall"))
-                {
-                    if(!other.transform.CompareTag("Contaminated"))
-                    {
-                        other.gameObject.tag = "Contaminated";
-                        //other.GetComponent<MeshRenderer>().material = Exposed;
-                        Material[] newMaterials = other.GetComponent<Renderer>().materials;
-                        for(int j=0; j<newMaterials.Length;j++)
-                        {
-                            newMaterials[j] = Exposed;
-                        }
-                        other.GetComponent<Renderer>().materials = newMaterials;
-                        
-                        //ParticleSystem newParticle = other.AddComponent(typeof(ParticleSystem)) as particleSystemContaminated;
-                        //other.AddComponent<GameObject>().particleSystemContaminated;
-                        GameObject particleObject = Instantiate(particleSystemContaminated, other.transform.position, other.transform.rotation, other.transform);//prefab,pos,rot,parent
-                        
-                        //other.AddComponent<ParticleCollision>();
-                    }
-                }
-
-
-                
-                
             }
             i++;
         }

@@ -13,6 +13,7 @@ TagManager:
   - Ceiling
   - Floor
   - Wall
+  - Contaminated
   layers:
   - Default
   - TransparentFX
