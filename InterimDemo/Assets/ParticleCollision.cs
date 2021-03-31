@@ -10,6 +10,8 @@ public class ParticleCollision : MonoBehaviour
 
     private float maskPreventionChance = -.1f;
 
+    private float vaccinePreventionChance = -.1f;
+
     
 
 
@@ -39,25 +41,33 @@ public class ParticleCollision : MonoBehaviour
 
                         PersonBehaviours collidedPersonBehaviours = other.GetComponent<PersonBehaviours>();
 
-                        if(collidedPersonBehaviours.wearingMask == true)
+                        if(collidedPersonBehaviours.lastHit < Time.time - 2)
                         {
-                            maskPreventionChance = 0.7f;
-                        }
-                        
-
-                        if(Random.value > maskPreventionChance)
-                        {
-                            Debug.Log("Infected");
-                            SkinnedMeshRenderer[] newMeshRenderer = other.GetComponentsInChildren<SkinnedMeshRenderer>();
-                            foreach(var m in newMeshRenderer)
+                            if(collidedPersonBehaviours.wearingMask == true)
                             {
-                                m.material = Exposed;
+                                maskPreventionChance = 0.7f;
                             }
-                            other.gameObject.tag = "Exposed";
-                        }
-                        else
-                        {
-                            Debug.Log("NOT infected");
+
+                            if(collidedPersonBehaviours.isVaccinated == true)
+                            {
+                                vaccinePreventionChance = 0.9f;
+                            }
+
+                            if(Random.value > maskPreventionChance && Random.value > vaccinePreventionChance)
+                            {
+                                Debug.Log("Infected");
+                                SkinnedMeshRenderer[] newMeshRenderer = other.GetComponentsInChildren<SkinnedMeshRenderer>();
+                                foreach(var m in newMeshRenderer)
+                                {
+                                    m.material = Exposed;
+                                }
+                                other.gameObject.tag = "Exposed";
+                            }
+                            else
+                            {
+                                Debug.Log("NOT infected");
+                            }
+                            collidedPersonBehaviours.lastHit = Time.time;
                         }
                         
                     }

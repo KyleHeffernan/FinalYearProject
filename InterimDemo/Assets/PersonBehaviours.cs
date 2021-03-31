@@ -27,7 +27,12 @@ public class PersonBehaviours : MonoBehaviour
     public Toggle maskToggle;
     public bool wearingMask;
 
+    public Toggle vaccineToggle;
+    public bool isVaccinated;
+
     public GameObject maskObject;
+
+    public float lastHit = 0;
 
     private void Awake() => _navMeshAgent = GetComponent<NavMeshAgent>();
 
@@ -38,11 +43,15 @@ public class PersonBehaviours : MonoBehaviour
         placeManager.availableDesks.Remove(assignedDesk.gameObject);
         startTime = Time.time;
         homeTime = WorkingHours.value;
+
         wearingMask = maskToggle.isOn;
+        isVaccinated = vaccineToggle.isOn;
+        Debug.Log("vaccinated: " + isVaccinated);
         if(wearingMask == false)
         {
             maskObject.SetActive(false);
         }
+
         //Debug.Log(wearingMask);
     }
 
