@@ -38,6 +38,8 @@ public class PersonBehaviours : MonoBehaviour
 
     public GameObject particleSystemMask;
 
+    public GameObject infoCanvas;
+
 
     private void Awake() => _navMeshAgent = GetComponent<NavMeshAgent>();
 
@@ -58,11 +60,15 @@ public class PersonBehaviours : MonoBehaviour
         }
         else
         {
-            if(this.tag == "Infectious")
+            if(this.transform.CompareTag("Infectious"))
             {   
                 particleSystemNoMask.SetActive(false);
                 particleSystemMask.SetActive(true);
             }
+        }
+        if(isVaccinated == true && !this.transform.CompareTag("Infectious"))
+        {
+            infoCanvas.SetActive(true);
         }
 
     }
