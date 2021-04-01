@@ -64,6 +64,7 @@ public class ParticleCollision : MonoBehaviour
                                     m.material = Exposed;
                                 }
                                 other.gameObject.tag = "Exposed";
+                                
                             }
                             else
                             {
