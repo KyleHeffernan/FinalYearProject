@@ -16,6 +16,8 @@ public class StartTimeManager : MonoBehaviour
 
     public GameObject endPanel;
 
+    public GameObject tipPanel;
+
     public GameObject player;
 
 
@@ -35,6 +37,7 @@ public class StartTimeManager : MonoBehaviour
             statsPanel.SetActive(false);
             camPanel1.SetActive(false);
             camPanel2.SetActive(false);
+            tipPanel.SetActive(false);
             //player.GetComponent<CharacterController>().enabled = false;
             player.GetComponent<Movement>().enabled = false;
             endPanel.SetActive(true);
