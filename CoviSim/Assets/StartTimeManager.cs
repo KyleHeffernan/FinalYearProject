@@ -16,6 +16,8 @@ public class StartTimeManager : MonoBehaviour
 
     public GameObject endPanel;
 
+    public GameObject player;
+
 
 
     // Start is called before the first frame update
@@ -33,6 +35,8 @@ public class StartTimeManager : MonoBehaviour
             statsPanel.SetActive(false);
             camPanel1.SetActive(false);
             camPanel2.SetActive(false);
+            //player.GetComponent<CharacterController>().enabled = false;
+            player.GetComponent<Movement>().enabled = false;
             endPanel.SetActive(true);
         }
     }
