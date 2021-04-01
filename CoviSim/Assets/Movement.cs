@@ -17,6 +17,8 @@ public class Movement : MonoBehaviour
     
     public float walkSpeed = 6.0f;
 
+    public float gravAmount = -5.0f;
+
     private Vector3 moveDirection = Vector3.zero;
     private Vector3 rotation;
 
@@ -31,11 +33,12 @@ public class Movement : MonoBehaviour
     {
         Vector3 moveRotation = new Vector3(0, Input.GetAxisRaw("Horizontal") * rotSpeed, 0);//get new rotation
         
-        moveDirection = new Vector3(0.0f, 0.0f, Input.GetAxis("Vertical"));
+        moveDirection = new Vector3(0.0f, gravAmount, Input.GetAxis("Vertical"));
         moveDirection = this.transform.TransformDirection(moveDirection) * walkSpeed * Time.deltaTime;
 
         // Move the controller
         characterController.Move(moveDirection * (Time.deltaTime * 1 / Time.timeScale));
         this.transform.Rotate(moveRotation * (Time.deltaTime * 1 / Time.timeScale));
+        
     }
 }

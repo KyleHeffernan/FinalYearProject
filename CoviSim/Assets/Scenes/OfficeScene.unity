@@ -1853,8 +1853,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -20777,8 +20777,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -24382,8 +24382,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -27481,8 +27481,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -32388,6 +32388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotSpeed: 40
   walkSpeed: 400
+  gravAmount: -1
 --- !u!4 &1119536941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4407548838867200, guid: 5bda03e6c90ba284f859d8e2c3a027fc,
@@ -32481,8 +32482,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -33743,8 +33744,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -33850,8 +33851,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -35244,8 +35245,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -35337,8 +35338,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -37066,8 +37067,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -38852,8 +38853,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -41041,8 +41042,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 26.47
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -51653,8 +51654,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8962264, g: 0.87871253, b: 0.7736294, a: 1}
-  m_Intensity: 1
-  m_Range: 15
+  m_Intensity: 1.4
+  m_Range: 16.94
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -52716,7 +52717,7 @@ LightingSettings:
   m_AlbedoBoost: 1
   m_IndirectOutputScale: 1
   m_UsingShadowmask: 1
-  m_BakeBackend: 1
+  m_BakeBackend: 2
   m_LightmapMaxSize: 1024
   m_BakeResolution: 40
   m_Padding: 2
