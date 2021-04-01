@@ -32381,13 +32381,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5d6df2a9e53be40b551b65673c8bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1200
-  jumpSpeed: 8
+  moveSpeed: 400
   gravity: 80
-  rotSpeed: 2200
-  walkSpeed: 1200
-  RunSpeed: 1200
-  maxSpeed: 1200
+  rotSpeed: 40
+  walkSpeed: 400
 --- !u!4 &1119536941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4407548838867200, guid: 5bda03e6c90ba284f859d8e2c3a027fc,
@@ -42242,6 +42239,7 @@ MonoBehaviour:
   camPanel1: {fileID: 977399344}
   camPanel2: {fileID: 1450675122}
   endPanel: {fileID: 1918363179}
+  player: {fileID: 1118534353}
 --- !u!1001 &1593213614
 PrefabInstance:
   m_ObjectHideFlags: 0
