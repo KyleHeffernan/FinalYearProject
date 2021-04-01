@@ -13,9 +13,6 @@ using Random = UnityEngine.Random;
 public class Movement : MonoBehaviour
 {
     CharacterController characterController;
-
-    public float moveSpeed = 0.0f;
-    public float gravity = 20.0f;
     public float rotSpeed = 180.0f;
     
     public float walkSpeed = 6.0f;
@@ -36,12 +33,9 @@ public class Movement : MonoBehaviour
         
         moveDirection = new Vector3(0.0f, 0.0f, Input.GetAxis("Vertical"));
         moveDirection = this.transform.TransformDirection(moveDirection) * walkSpeed * Time.deltaTime;
-            
-        
-        
 
         // Move the controller
         characterController.Move(moveDirection * (Time.deltaTime * 1 / Time.timeScale));
         this.transform.Rotate(moveRotation * (Time.deltaTime * 1 / Time.timeScale));
-    }//End update
+    }
 }
