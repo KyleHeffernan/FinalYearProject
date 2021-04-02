@@ -26,6 +26,8 @@ public class StatusCounters : MonoBehaviour
 
     public StartTimeManager startTimeManager;
 
+    public TextMeshProUGUI fpsDisplay;
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,9 @@ public class StatusCounters : MonoBehaviour
         TimeLeft.text = "Time Left: " + Mathf.Clamp(Mathf.Round(WorkingHours.value - (Time.time - startTimeManager.startTime)), 0, 10000);
 
         exposedFinal.text = exposedText.text;
+
+        float fps = 1 / Time.unscaledDeltaTime;
+        fpsDisplay.text = "FPS: " + Mathf.Round(fps);
         
     }
 }
