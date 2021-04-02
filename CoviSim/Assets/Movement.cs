@@ -39,6 +39,12 @@ public class Movement : MonoBehaviour
         // Move the controller
         characterController.Move(moveDirection * (Time.deltaTime * 1 / Time.timeScale));
         this.transform.Rotate(moveRotation * (Time.deltaTime * 1 / Time.timeScale));
+
+        if(this.transform.position.x < 0)
+        {
+            Vector3 temp = new Vector3(0.2f,0,0);
+            this.transform.position += temp;
+        }
         
     }
 }

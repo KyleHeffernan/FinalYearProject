@@ -10449,7 +10449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218770919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.37, y: 0, z: 0.55}
+  m_LocalPosition: {x: -30, y: 0, z: 0.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -29326,6 +29326,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExposedAgentParticles
       objectReference: {fileID: 0}
+    - target: {fileID: 247379647468231175, guid: b32a500fed54feb41ac40d5cb8b0c033,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -9151863342578526684, guid: b32a500fed54feb41ac40d5cb8b0c033, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b32a500fed54feb41ac40d5cb8b0c033, type: 3}
@@ -46641,6 +46646,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 665353819}
     m_Modifications:
+    - target: {fileID: 6982896903646640045, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
       propertyPath: home
@@ -46650,6 +46660,11 @@ PrefabInstance:
         type: 3}
       propertyPath: homeTime
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6982896903646640046, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
@@ -46685,6 +46700,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CollisionDetection
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6982896903646640049, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7449660502696363132, guid: d57684f3a8cda2a479bc95bb6d55ac1b,
         type: 3}
@@ -54313,6 +54333,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ParticleSystemContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 247379647468231175, guid: b32a500fed54feb41ac40d5cb8b0c033,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b32a500fed54feb41ac40d5cb8b0c033, type: 3}

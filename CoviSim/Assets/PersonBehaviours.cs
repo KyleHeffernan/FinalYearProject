@@ -213,10 +213,10 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void GoneHome()
     {
-        gameObject.GetComponent<CapsuleCollider>().enabled = false;
-        if(Vector3.Distance(this.transform.position, placeManager.Home.transform.position) < 1)
+        if(Vector3.Distance(this.transform.position, placeManager.Home.transform.position) < 35)
         {
-            this.enabled = false;
+            gameObject.GetComponent<CapsuleCollider>().enabled = false;
+            //gameObject.GetComponent<Renderer>().enabled = false;
         }
         Task.current.Succeed();
     }
