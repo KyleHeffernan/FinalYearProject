@@ -11,6 +11,8 @@ public class CameraSwitch : MonoBehaviour
 
     public GameObject camera3;
 
+    public GameObject camera4;
+
     public GameObject panel1;
 
     public GameObject panel2;
@@ -33,6 +35,7 @@ public class CameraSwitch : MonoBehaviour
             camera1.SetActive(true);
             camera2.SetActive(false);
             camera3.SetActive(false);
+            camera4.SetActive(false);
         }
         if(Input.GetButtonDown("Switch2"))
         {
@@ -41,7 +44,7 @@ public class CameraSwitch : MonoBehaviour
             camera1.SetActive(false);
             camera2.SetActive(true);
             camera3.SetActive(false);
-
+            camera4.SetActive(false);
         }
         if(Input.GetButtonDown("Switch3"))
         {
@@ -50,8 +53,19 @@ public class CameraSwitch : MonoBehaviour
             camera1.SetActive(false);
             camera2.SetActive(false);
             camera3.SetActive(true);
-
+            camera4.SetActive(false);
         }
+        
+        if(Input.GetButtonDown("Switch4"))
+        {
+            panel1.SetActive(false);
+            panel2.SetActive(true);
+            camera1.SetActive(false);
+            camera2.SetActive(false);
+            camera3.SetActive(false);
+            camera4.SetActive(true);
+        }
+        
 
 
     }

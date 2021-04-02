@@ -10453,7 +10453,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &218967578
 GameObject:
@@ -19161,6 +19161,89 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 247379647634205231}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &439467310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 439467313}
+  - component: {fileID: 439467312}
+  - component: {fileID: 439467311}
+  m_Layer: 0
+  m_Name: OfficeCam3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!81 &439467311
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439467310}
+  m_Enabled: 1
+--- !u!20 &439467312
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439467310}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &439467313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439467310}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 15.05, y: 0.82, z: 20.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &440537187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22240,7 +22323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 620315981}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.79, y: 0.82, z: -9.19}
+  m_LocalPosition: {x: 26.38, y: 0.82, z: -9.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -24333,7 +24416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737498861}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 30.85, y: 0.9, z: 30.76}
+  m_LocalPosition: {x: 30.18, y: 0.9, z: 30.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -27115,7 +27198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Switch to player view with 1 or between office cameras with 2 or 3.
+  m_text: Switch to player view with 1 or between office cameras with 2,3, or 4.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -29181,7 +29264,7 @@ PrefabInstance:
     - target: {fileID: 247379647468231172, guid: b32a500fed54feb41ac40d5cb8b0c033,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 247379647468231172, guid: b32a500fed54feb41ac40d5cb8b0c033,
         type: 3}
@@ -31495,7 +31578,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Walk with WASD or switch to office cameras by pressing 2 or 3.
+  m_text: Walk with WASD or switch to office cameras by pressing 2, 3 or 4.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -32792,7 +32875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5d6df2a9e53be40b551b65673c8bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 40
+  rotSpeed: 60
   walkSpeed: 400
   gravAmount: -1
 --- !u!4 &1119536941 stripped
@@ -48378,6 +48461,7 @@ MonoBehaviour:
   camera1: {fileID: 1118534353}
   camera2: {fileID: 737498861}
   camera3: {fileID: 620315981}
+  camera4: {fileID: 439467310}
   panel1: {fileID: 977399344}
   panel2: {fileID: 1450675122}
 --- !u!1001 &1869689745
@@ -54168,7 +54252,7 @@ PrefabInstance:
     - target: {fileID: 247379647468231172, guid: b32a500fed54feb41ac40d5cb8b0c033,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 247379647468231172, guid: b32a500fed54feb41ac40d5cb8b0c033,
         type: 3}
