@@ -12,7 +12,7 @@ public class ContaminatedSurface : MonoBehaviour
 
     private float vaccinePreventionChance = -.1f;
 
-
+    public GameObject particleSystemExposed;
     
 
 
@@ -62,6 +62,7 @@ public class ContaminatedSurface : MonoBehaviour
                                     m.material = Exposed;
                                 }
                                 other.gameObject.tag = "Exposed";
+                                GameObject particleObject = Instantiate(particleSystemExposed, other.transform.position, other.transform.rotation, other.transform);//prefab,pos,rot,parent
                             }
                             else
                             {

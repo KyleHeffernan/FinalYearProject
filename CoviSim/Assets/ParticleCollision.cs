@@ -14,6 +14,8 @@ public class ParticleCollision : MonoBehaviour
 
     public GameObject particleSystemContaminated;
 
+    public GameObject particleSystemExposed;
+
     
 
 
@@ -64,6 +66,8 @@ public class ParticleCollision : MonoBehaviour
                                     m.material = Exposed;
                                 }
                                 other.gameObject.tag = "Exposed";
+                                other.gameObject.GetComponent<CapsuleCollider>().enabled = false;
+                                GameObject particleObject = Instantiate(particleSystemExposed, other.transform.position, other.transform.rotation, other.transform);//prefab,pos,rot,parent
                                 
                             }
                             else
