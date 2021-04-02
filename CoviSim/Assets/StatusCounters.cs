@@ -45,7 +45,7 @@ public class StatusCounters : MonoBehaviour
         GameObject[] infectious = GameObject.FindGameObjectsWithTag("Infectious");
         infectiousText.text="Infectious: " + infectious.Length;
 
-        timeScaleValue.text = "Time Scale: " + timeSlider.value;
+        timeScaleValue.text = "Time Scale: " + Mathf.Round(timeSlider.value);
 
         WorkingHoursText.text = "Working Hours: " + Mathf.Max(Mathf.Round(WorkingHours.value / 60), 1);
 
