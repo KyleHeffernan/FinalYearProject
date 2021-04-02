@@ -27,12 +27,11 @@ public class ContaminatedSurface : MonoBehaviour
         int numCollisionEvents = particle.GetCollisionEvents(other, collisionEvents);
         Rigidbody rb = other.GetComponent<Rigidbody>();
         int i = 0;
-        //Debug.Log("name: " + other.transform.name + ", tag: " + other.transform.tag);
 
         while(i < numCollisionEvents)
         {
-            //Debug.Log(i + "," + numCollisionEvents);
 
+            // If its colliding with a healthy agent
             if(rb != null)
             {
                 if(!other.transform.CompareTag("Infectious"))

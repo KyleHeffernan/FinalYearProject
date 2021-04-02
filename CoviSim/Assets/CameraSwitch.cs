@@ -27,7 +27,7 @@ public class CameraSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // If statements which turn on/off panels/cameras based on which camera the users looking through
         if(Input.GetButtonDown("Switch1"))
         {
             panel1.SetActive(true);

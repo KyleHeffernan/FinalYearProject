@@ -7,16 +7,16 @@ public class ExitApplication : MonoBehaviour
 {
     private void Update()
     {
+        //Escape button to quit
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             Quit();
         }
     }
 
-    //Can be called from gui button press or escape key
+    //Called from the "exit" button on start and end screen, and by the ESC button
     public void Quit()
     {
-        //print("Quit");
         Application.Quit();
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false; 

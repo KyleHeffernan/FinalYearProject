@@ -6,7 +6,6 @@ public class FacePlayer : MonoBehaviour
 {
     private Transform cam;
     public float lerpSpeed = 5;
-    public bool reverseDir = false;//Need this because some things such as guis face forward in wrong direction
     
     // Start is called before the first frame update
     void Start()
@@ -19,14 +18,8 @@ public class FacePlayer : MonoBehaviour
     {
         Vector3 relativePos;//For holding point to look
         
-        if (reverseDir)//Flip direction
-        {
-            relativePos = transform.position - cam.transform.position;
-        }
-        else
-        {
-            relativePos = cam.transform.position - transform.position;
-        }
+        relativePos = cam.transform.position - transform.position;
+        
         
         Quaternion toRotation = Quaternion.LookRotation(relativePos, cam.transform.up);//For holding new rotation
         transform.rotation = Quaternion.Lerp( transform.rotation, toRotation, lerpSpeed * Time.deltaTime );
