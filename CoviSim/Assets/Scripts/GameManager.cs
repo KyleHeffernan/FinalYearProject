@@ -25,11 +25,13 @@ public class GameManager : MonoBehaviour
 
     public void SetTime (Slider slider)
     {
+        //Changes the timescale to the value of the slider
         Time.timeScale = slider.value;
     }
 
     public void RestartScene()
     {
+        //Reloads the scene
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName,LoadSceneMode.Single);
     }

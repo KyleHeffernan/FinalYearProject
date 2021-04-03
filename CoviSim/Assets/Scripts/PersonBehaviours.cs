@@ -73,12 +73,14 @@ public class PersonBehaviours : MonoBehaviour
         }
         else
         {
+            //If the agent is wearing a mask AND is infectious, change their particlesystem to the mask variant
             if(this.transform.CompareTag("Infectious"))
             {   
                 particleSystemNoMask.SetActive(false);
                 particleSystemMask.SetActive(true);
             }
         }
+        //If agent is healthy and vaccinated, enable the vaccine graphic above them
         if(isVaccinated == true && !this.transform.CompareTag("Infectious"))
         {
             infoCanvas.SetActive(true);
@@ -91,7 +93,9 @@ public class PersonBehaviours : MonoBehaviour
     {
 
     }
+    //Anything marked as a Task is a method used in the behaviour trees
 
+    //Checking if the agent should continue working or go to a rec point
     [Task]
     void CheckWorking()
     {
@@ -106,6 +110,7 @@ public class PersonBehaviours : MonoBehaviour
 
     }
 
+    //Checking if the agent is at a rec point should they go back to work
     [Task]
     void CheckOnBreak()
     {
@@ -120,6 +125,7 @@ public class PersonBehaviours : MonoBehaviour
 
     }
 
+    //Checking if the agent has reached their desk
     [Task]
     void CheckAtDesk()
     {
@@ -133,6 +139,7 @@ public class PersonBehaviours : MonoBehaviour
         }
     }
 
+    //Setting the agents desk as their destination
     [Task]
     void GoToDesk()
     {
@@ -141,15 +148,16 @@ public class PersonBehaviours : MonoBehaviour
         Task.current.Succeed();
     }
 
+    //When the agent is at their desk, make them look forward before they do their 20 seconds of work
     [Task]
     void Work()
     {
         Vector3 lookDirection = -assignedDesk.transform.forward;
         transform.rotation = Quaternion.LookRotation(lookDirection, transform.up);
-        //this.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
         Task.current.Succeed();
     }
 
+    //1 in 5 chance that the agent will be set to go to a rec point before their next work session
     [Task]
     void FinishWorkSession()
     {
@@ -161,8 +169,7 @@ public class PersonBehaviours : MonoBehaviour
 
     }
 
-
-
+    //Set the target to be a random rec point in the office
     [Task]
     void GetRecTarget()
     {
@@ -170,6 +177,7 @@ public class PersonBehaviours : MonoBehaviour
         Task.current.Succeed();
     }
 
+    //Checking if the agent arrived at the rec point
     [Task]
     void CheckAtRec()
     {
@@ -183,19 +191,22 @@ public class PersonBehaviours : MonoBehaviour
         }
     }
 
+    //Setting the agents destination to the rec target
     [Task]
     void GoToRec()
     {
         _navMeshAgent.destination = target.transform.position;
         Task.current.Succeed();
     }
-
+    
+    //Before the 10 second wait
     [Task]
     void Rec()
     {
         Task.current.Succeed();
     }
 
+    //After the 10 second wait, set their workingcheck back to true so they will go back to working
     [Task]
     void FinishRec()
     {
@@ -203,6 +214,7 @@ public class PersonBehaviours : MonoBehaviour
         Task.current.Succeed();
     }
 
+    //Checking if the time passed has gona above working hours
     [Task]
     void CheckHome()
     {
@@ -216,6 +228,7 @@ public class PersonBehaviours : MonoBehaviour
         }
     }
 
+    //Set the agents destination to home
     [Task]
     void GoHome()
     {
@@ -223,13 +236,13 @@ public class PersonBehaviours : MonoBehaviour
         Task.current.Succeed();
     }
 
+    //Once the agent has gotten out of the main office, turn off their collider
     [Task]
     void GoneHome()
     {
         if(Vector3.Distance(this.transform.position, placeManager.Home.transform.position) < 42)
         {
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
-            //gameObject.GetComponent<Renderer>().enabled = false;
         }
         Task.current.Succeed();
     }

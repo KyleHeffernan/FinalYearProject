@@ -10,7 +10,7 @@ public class ExitApplication : MonoBehaviour
         
     }
 
-    //Called from the "exit" button on start and end screen, and by the ESC button
+    //Called from the "exit" button on start and end screen. Closes program
     public void Quit()
     {
         Application.Quit();

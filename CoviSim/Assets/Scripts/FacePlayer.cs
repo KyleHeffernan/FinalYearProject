@@ -20,8 +20,9 @@ public class FacePlayer : MonoBehaviour
         
         relativePos = cam.transform.position - transform.position;
         
-        
-        Quaternion toRotation = Quaternion.LookRotation(relativePos, cam.transform.up);//For holding new rotation
+        //For holding new rotation
+        Quaternion toRotation = Quaternion.LookRotation(relativePos, cam.transform.up);
+        //Lerps the vaccine icon to face the player
         transform.rotation = Quaternion.Lerp( transform.rotation, toRotation, lerpSpeed * Time.deltaTime );
 
     }
