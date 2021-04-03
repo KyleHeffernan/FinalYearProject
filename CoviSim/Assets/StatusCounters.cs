@@ -28,6 +28,8 @@ public class StatusCounters : MonoBehaviour
 
     public TextMeshProUGUI fpsDisplay;
 
+    public TextMeshProUGUI contaminated;
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,6 +58,9 @@ public class StatusCounters : MonoBehaviour
         TimeLeft.text = "Shift Ends: " + Mathf.Clamp(Mathf.Round(WorkingHours.value - (Time.time - startTimeManager.startTime)), 0, 10000);
 
         exposedFinal.text = exposedText.text + " out of 20";
+
+        GameObject[] contaminatedList = GameObject.FindGameObjectsWithTag("Contaminated");
+        contaminated.text = contaminatedList.Length + " items were contaminated";
 
         float fps = 1 / Time.unscaledDeltaTime;
         fpsDisplay.text = "FPS: " + Mathf.Round(fps);
