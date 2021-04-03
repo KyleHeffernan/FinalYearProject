@@ -59,7 +59,7 @@ public class ParticleCollision : MonoBehaviour
 
                             if(Random.value > maskPreventionChance && Random.value > vaccinePreventionChance)
                             {
-                                Debug.Log("Infected");
+                                //Debug.Log("Infected");
                                 SkinnedMeshRenderer[] newMeshRenderer = other.GetComponentsInChildren<SkinnedMeshRenderer>();
                                 foreach(var m in newMeshRenderer)
                                 {
@@ -72,7 +72,7 @@ public class ParticleCollision : MonoBehaviour
                             }
                             else
                             {
-                                Debug.Log("NOT infected");
+                                //Debug.Log("NOT infected");
                             }
                             collidedPersonBehaviours.lastHit = Time.time;
                         }

@@ -55,7 +55,7 @@ public class ContaminatedSurface : MonoBehaviour
 
                             if(Random.value > maskPreventionChance && Random.value > vaccinePreventionChance)
                             {
-                                Debug.Log("Infected from surface");
+                                //Debug.Log("Infected from surface");
                                 SkinnedMeshRenderer[] newMeshRenderer = other.GetComponentsInChildren<SkinnedMeshRenderer>();
                                 foreach(var m in newMeshRenderer)
                                 {
@@ -66,7 +66,7 @@ public class ContaminatedSurface : MonoBehaviour
                             }
                             else
                             {
-                                Debug.Log("NOT infected from surface");
+                                //Debug.Log("NOT infected from surface");
                             }
                             collidedPersonBehaviours.lastHit = Time.time;
                         }
