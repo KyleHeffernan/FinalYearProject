@@ -44092,7 +44092,6 @@ MonoBehaviour:
   exposedFinal: {fileID: 6661660}
   startTimeManager: {fileID: 1592333254}
   fpsDisplay: {fileID: 252185576}
-  contaminated: {fileID: 327678510}
 --- !u!114 &1592333253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44129,6 +44128,7 @@ MonoBehaviour:
   endPanel: {fileID: 1918363179}
   tipPanel: {fileID: 2075958880}
   player: {fileID: 1118534353}
+  contaminated: {fileID: 327678510}
 --- !u!114 &1592333255
 MonoBehaviour:
   m_ObjectHideFlags: 0
