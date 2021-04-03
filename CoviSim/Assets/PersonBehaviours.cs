@@ -25,6 +25,8 @@ public class PersonBehaviours : MonoBehaviour
     private float homeTime;
 
     public Toggle maskToggle;
+
+    public Toggle maskToggle1;
     public bool wearingMask;
 
     public Toggle vaccineToggle;
@@ -50,8 +52,15 @@ public class PersonBehaviours : MonoBehaviour
         placeManager.availableDesks.Remove(assignedDesk.gameObject);
         startTime = Time.time;
         homeTime = WorkingHours.value;
-
-        wearingMask = maskToggle.isOn;
+        if(this.transform.CompareTag("Infectious"))
+        {
+            wearingMask = maskToggle1.isOn;
+        }
+        else
+        {
+            wearingMask = maskToggle.isOn;
+        }
+        
         isVaccinated = vaccineToggle.isOn;
         //Debug.Log("vaccinated: " + isVaccinated);
         if(wearingMask == false)
