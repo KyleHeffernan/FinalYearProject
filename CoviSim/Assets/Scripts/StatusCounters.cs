@@ -52,7 +52,7 @@ public class StatusCounters : MonoBehaviour
         //Display the value when the user is adjusting the timescale slider
         timeScaleValue.text = "Time Scale: " + Mathf.Round(timeSlider.value);
         //Display the value when the user is adjusting the working hours slider
-        WorkingHoursText.text = "Working Hours: " + Mathf.Max(Mathf.Round(WorkingHours.value / 60), 1);
+        WorkingHoursText.text = "Employee working hours: " + Mathf.Max(Mathf.Round(WorkingHours.value / 60), 1);
         //Display the time passed and time left of the workers shift
         ElapsedTime.text = "Elapsed Time: " + Mathf.Round(Time.time - startTimeManager.startTime);
         TimeLeft.text = "Shift Ends: " + Mathf.Clamp(Mathf.Round(WorkingHours.value - (Time.time - startTimeManager.startTime)), 0, 10000);

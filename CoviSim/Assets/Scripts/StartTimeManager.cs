@@ -44,6 +44,7 @@ public class StartTimeManager : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
+        player.GetComponent<Movement>().enabled = true;
     }
 
     // Update is called once per frame
