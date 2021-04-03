@@ -30,6 +30,10 @@ public class StartTimeManager : MonoBehaviour
 
     public TextMeshProUGUI infectedMask;
 
+    public TextMeshProUGUI workingHours;
+
+    public Slider workingHoursSlider;
+
     public Toggle maskToggle;
 
     public Toggle maskToggle1;
@@ -69,6 +73,8 @@ public class StartTimeManager : MonoBehaviour
 
             GameObject[] contaminatedList = GameObject.FindGameObjectsWithTag("Contaminated");
             contaminated.text = contaminatedList.Length + " items were contaminated";
+
+            workingHours.text = "Employee working hours: " + Mathf.Max(Mathf.Round(workingHoursSlider.value / 60), 1);
 
             if(maskToggle.isOn)
             {
