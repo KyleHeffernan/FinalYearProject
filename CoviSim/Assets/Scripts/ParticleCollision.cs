@@ -83,7 +83,7 @@ public class ParticleCollision : MonoBehaviour
             }
             else
             {
-                if(!other.transform.CompareTag("Ceiling") && !other.transform.CompareTag("Floor") && !other.transform.CompareTag("Wall"))
+                if(!other.transform.CompareTag("Ceiling") && !other.transform.CompareTag("Floor") && !other.transform.CompareTag("Wall") && !other.transform.CompareTag("Player"))
                 {
                     if(!other.transform.CompareTag("Contaminated"))
                     {
