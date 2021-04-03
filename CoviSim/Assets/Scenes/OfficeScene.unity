@@ -44089,7 +44089,6 @@ MonoBehaviour:
   timeScaleValue: {fileID: 1461061133}
   ElapsedTime: {fileID: 1031367074}
   TimeLeft: {fileID: 936745891}
-  exposedFinal: {fileID: 6661660}
   startTimeManager: {fileID: 1592333254}
   fpsDisplay: {fileID: 252185576}
 --- !u!114 &1592333253
@@ -44128,6 +44127,7 @@ MonoBehaviour:
   endPanel: {fileID: 1918363179}
   tipPanel: {fileID: 2075958880}
   player: {fileID: 1118534353}
+  exposedFinal: {fileID: 6661660}
   contaminated: {fileID: 327678510}
 --- !u!114 &1592333255
 MonoBehaviour:

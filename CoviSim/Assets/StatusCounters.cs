@@ -22,11 +22,10 @@ public class StatusCounters : MonoBehaviour
 
     public TextMeshProUGUI TimeLeft;
 
-    public TextMeshProUGUI exposedFinal;
-
     public StartTimeManager startTimeManager;
 
     public TextMeshProUGUI fpsDisplay;
+
 
     
 
@@ -57,10 +56,8 @@ public class StatusCounters : MonoBehaviour
 
         TimeLeft.text = "Shift Ends: " + Mathf.Clamp(Mathf.Round(WorkingHours.value - (Time.time - startTimeManager.startTime)), 0, 10000);
 
-        exposedFinal.text = exposedText.text + " out of 20";
-
         
-
+        
         float fps = 1 / Time.unscaledDeltaTime;
         fpsDisplay.text = "FPS: " + Mathf.Round(fps);
         

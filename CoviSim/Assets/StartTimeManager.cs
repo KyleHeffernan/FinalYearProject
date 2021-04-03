@@ -21,6 +21,7 @@ public class StartTimeManager : MonoBehaviour
 
     public GameObject player;
 
+    public TextMeshProUGUI exposedFinal;
     public TextMeshProUGUI contaminated;
 
     private int runOnce = 0;
@@ -47,7 +48,10 @@ public class StartTimeManager : MonoBehaviour
             tipPanel.SetActive(false);
             player.GetComponent<Movement>().enabled = false;
             endPanel.SetActive(true);
-            
+
+            GameObject[] exposedList = GameObject.FindGameObjectsWithTag("Exposed");
+            exposedFinal.text = exposedList.Length + " out of 20 workers were exposed";
+
             GameObject[] contaminatedList = GameObject.FindGameObjectsWithTag("Contaminated");
             contaminated.text = contaminatedList.Length + " items were contaminated";
         }
