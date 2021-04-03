@@ -24,6 +24,18 @@ public class StartTimeManager : MonoBehaviour
     public TextMeshProUGUI exposedFinal;
     public TextMeshProUGUI contaminated;
 
+    public TextMeshProUGUI vaccinated;
+
+    public TextMeshProUGUI healthyMask;
+
+    public TextMeshProUGUI infectedMask;
+
+    public Toggle maskToggle;
+
+    public Toggle maskToggle1;
+
+    public Toggle vaccineToggle;
+
     private int runOnce = 0;
 
 
@@ -54,6 +66,36 @@ public class StartTimeManager : MonoBehaviour
 
             GameObject[] contaminatedList = GameObject.FindGameObjectsWithTag("Contaminated");
             contaminated.text = contaminatedList.Length + " items were contaminated";
+
+            if(maskToggle.isOn)
+            {
+                healthyMask.text ="Healthy workers were wearing masks";
+            }
+            else
+            {
+                healthyMask.text ="Healthy workers were not wearing masks";
+            }
+
+            if(maskToggle1.isOn)
+            {
+                infectedMask.text ="The infected worker was wearing a mask";
+            }
+            else
+            {
+                infectedMask.text ="The infected worker was not wearing a mask";
+            }
+
+            if(vaccineToggle.isOn)
+            {
+                vaccinated.text ="Healthy workers were vaccinated";
+            }
+            else
+            {
+                vaccinated.text ="Healthy workers were not vaccinated";
+            }
+
+            
+
         }
     }
 }
