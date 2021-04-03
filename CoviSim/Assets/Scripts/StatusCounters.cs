@@ -39,6 +39,7 @@ public class StatusCounters : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Finding all of the objects with their respective tags and constantly updating the display
         GameObject[] exposed = GameObject.FindGameObjectsWithTag("Exposed");
         exposedText.text="Exposed: " + exposed.Length;
 
@@ -48,16 +49,16 @@ public class StatusCounters : MonoBehaviour
         GameObject[] infectious = GameObject.FindGameObjectsWithTag("Infectious");
         infectiousText.text="Infectious: " + infectious.Length;
 
+        //Display the value when the user is adjusting the timescale slider
         timeScaleValue.text = "Time Scale: " + Mathf.Round(timeSlider.value);
-
+        //Display the value when the user is adjusting the working hours slider
         WorkingHoursText.text = "Working Hours: " + Mathf.Max(Mathf.Round(WorkingHours.value / 60), 1);
-
+        //Display the time passed and time left of the workers shift
         ElapsedTime.text = "Elapsed Time: " + Mathf.Round(Time.time - startTimeManager.startTime);
-
         TimeLeft.text = "Shift Ends: " + Mathf.Clamp(Mathf.Round(WorkingHours.value - (Time.time - startTimeManager.startTime)), 0, 10000);
 
         
-        
+        //Updating the FPS display
         float fps = 1 / Time.unscaledDeltaTime;
         fpsDisplay.text = "FPS: " + Mathf.Round(fps);
         

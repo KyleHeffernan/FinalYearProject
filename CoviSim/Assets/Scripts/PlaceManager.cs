@@ -13,8 +13,6 @@ public class PlaceManager : MonoBehaviour
     void Awake()
     {
         PopulateLists();
-        //availableDesks = new List<GameObject>();
-        //recPoints = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -24,12 +22,13 @@ public class PlaceManager : MonoBehaviour
     }
     void PopulateLists()
     {
+        //Called on awake, this finds all of the desks in the scene and populates a list
         GameObject[] desks = GameObject.FindGameObjectsWithTag("Chair");
         foreach (var ob in desks)
         {
             availableDesks.Add(ob);
         }
-
+        //Called on awake, this finds all of the recpoints in the scene and populates a list
         GameObject[] recs = GameObject.FindGameObjectsWithTag("Rec");
         foreach (var ob in recs)
         {

@@ -48,10 +48,14 @@ public class PersonBehaviours : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Each agent gets assigned a random desk and removes it from the list so no agents will get the same desk
         assignedDesk = placeManager.availableDesks[Random.Range(0, placeManager.availableDesks.Count-1)].transform;
         placeManager.availableDesks.Remove(assignedDesk.gameObject);
+        //Saving the time the agents spawn
         startTime = Time.time;
+        //Saving the workers hift time
         homeTime = WorkingHours.value;
+        //Change mask toggle based on what user selected
         if(this.transform.CompareTag("Infectious"))
         {
             wearingMask = maskToggle1.isOn;
@@ -60,9 +64,9 @@ public class PersonBehaviours : MonoBehaviour
         {
             wearingMask = maskToggle.isOn;
         }
-        
+        //Change vaccine toggle to what user selected
         isVaccinated = vaccineToggle.isOn;
-        //Debug.Log("vaccinated: " + isVaccinated);
+        //If not wearing mask, disable mask object
         if(wearingMask == false)
         {
             maskObject.SetActive(false);

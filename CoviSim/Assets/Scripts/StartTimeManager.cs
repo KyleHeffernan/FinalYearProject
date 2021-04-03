@@ -49,10 +49,12 @@ public class StartTimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //25 seconds after the workers shift has finished, giving them time to leave
         if((statusCounters.WorkingHours.value + 25) < (Time.time - startTime) && runOnce == 0)
         {
+            //Only run following code as values will not change
             runOnce = 1;
-
+            //Disabling other GUI and showing end screen
             timePanel.SetActive(false);
             statsPanel.SetActive(false);
             camPanel1.SetActive(false);
@@ -60,7 +62,7 @@ public class StartTimeManager : MonoBehaviour
             tipPanel.SetActive(false);
             player.GetComponent<Movement>().enabled = false;
             endPanel.SetActive(true);
-
+            //Updating the end screen stats
             GameObject[] exposedList = GameObject.FindGameObjectsWithTag("Exposed");
             exposedFinal.text = exposedList.Length + " out of 20 workers were exposed";
 
@@ -93,8 +95,6 @@ public class StartTimeManager : MonoBehaviour
             {
                 vaccinated.text ="Healthy workers were not vaccinated";
             }
-
-            
 
         }
     }
