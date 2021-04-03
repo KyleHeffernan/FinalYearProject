@@ -213,40 +213,12 @@ public class PersonBehaviours : MonoBehaviour
     [Task]
     void GoneHome()
     {
-        if(Vector3.Distance(this.transform.position, placeManager.Home.transform.position) < 41)
+        if(Vector3.Distance(this.transform.position, placeManager.Home.transform.position) < 42)
         {
             gameObject.GetComponent<CapsuleCollider>().enabled = false;
             //gameObject.GetComponent<Renderer>().enabled = false;
         }
         Task.current.Succeed();
     }
-
-
-
-    /*
-    [Task]
-    void CheckReached()
-    {
-        if(Vector3.Distance(this.transform.position, _navMeshAgent.destination) < 1)
-        {
-            Task.current.Succeed();
-
-            //_navMeshAgent.SetDestination(path.NextWaypoint());
-        }
-        else
-        {
-            Task.current.Fail();
-        }
-    }
-
-    [Task]
-    void SetNew()
-    {
-        _navMeshAgent.SetDestination(target.transform.position);
-        Task.current.Succeed();
-    }
-    */
-
-
     
 }
