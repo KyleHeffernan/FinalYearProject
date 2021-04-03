@@ -16,7 +16,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- 
+        //Escape button to quit
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            RestartScene();
+        }
     }
 
     public void SetTime (Slider slider)
