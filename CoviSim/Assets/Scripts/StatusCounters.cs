@@ -5,8 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 public class StatusCounters : MonoBehaviour
 {
-
-
+    //TextMeshPros and other GUI elements which will be updated as the simulation runs
     public TextMeshProUGUI exposedText;
     public TextMeshProUGUI healthyText;
     public TextMeshProUGUI infectiousText;

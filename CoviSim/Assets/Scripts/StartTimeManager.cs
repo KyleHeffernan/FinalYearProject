@@ -6,6 +6,7 @@ using TMPro;
 
 public class StartTimeManager : MonoBehaviour
 {
+    //TextMeshPros and other GUI elements for the end screen
     public float startTime;
 
     public StatusCounters statusCounters;
@@ -47,6 +48,7 @@ public class StartTimeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Captures the time that the user pressed the "start simulation button"
         startTime = Time.time;
         player.GetComponent<Movement>().enabled = true;
     }
@@ -57,7 +59,7 @@ public class StartTimeManager : MonoBehaviour
         //25 seconds after the workers shift has finished, giving them time to leave
         if((statusCounters.WorkingHours.value + 25) < (Time.time - startTime) && runOnce == 0)
         {
-            //Only run following code as values will not change
+            //Only run following code once as values will not change
             runOnce = 1;
             //Disabling other GUI and showing end screen
             timePanel.SetActive(false);
